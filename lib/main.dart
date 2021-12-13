@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orientation_demos/dynamic_view.dart';
 
 void main() {
   runApp(OrientationFix());
@@ -12,10 +13,9 @@ class OrientationFix extends StatelessWidget {
     return MaterialApp(
         title: 'Orientation Test App',
         home: Scaffold(
-            appBar: AppBar(title: Text("Orientation App")),
-            body: Row(
-              children: [DynamicWidget()],
-            )));
+          appBar: AppBar(title: Text("Orientation App")),
+          body: SafeArea(child: DynamicView()),
+        ));
   }
 }
 
